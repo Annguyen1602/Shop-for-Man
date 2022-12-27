@@ -1,9 +1,10 @@
 import React from 'react'
-
+import Shop from './components/Shop'
+import { shopapi } from './data/data'
 const App = () => {
   return (
     <>
-    <h1>Welcome</h1>
+    <Shop shopapi = {shopapi}/>
     </>
   )
 }
