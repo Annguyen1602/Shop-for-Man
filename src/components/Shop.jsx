@@ -1,4 +1,5 @@
 import React from "react";
+import Video from "../Template/Video";
 
 const Shop = ({shopapi: {title, subtitle, btntext, img, sociallinks, videos}}) => {
    
@@ -11,12 +12,18 @@ const Shop = ({shopapi: {title, subtitle, btntext, img, sociallinks, videos}}) =
                 <h1 className="text-6xl lg:text-5xl md:text-4xl sm:text-3xl xsm:text-2xl font-extrabold filter drop-shadow-sm text-slate-200 ">{title}</h1>
                 <h1 className="text-6xl lg:text-5xl md:text-4xl sm:text-3xl xsm:text-2xl font-extrabold filter drop-shadow-sm text-slate-200 ">{subtitle}</h1>
                 <button type="button" className="button-theme bg-slate-200 rounded-xl my-5">{btntext}</button>
-                <div></div>
+                <div>
+                  {videos.map((video,index)=>{
+                    <Video key={index}
+                    imgSrc={video.imgsrc}
+                    clip={video.clip}/>
+                  })}
+                </div>
                 <div></div>
 
             </div>
             <div>
-                <img src={img} alt="image" />
+                <img src={img} alt="image" className="w-aut0 h-[45vh] lg:h-[35vh] md:h-[31vh] sm:h-[21vh] xsm:h-[19vh] transitions-theme -rotate-[25deg] hover:rotate-0 cursor-pointer object-fill"/>
             </div>
 
         </div>
