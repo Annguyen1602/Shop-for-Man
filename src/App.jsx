@@ -1,10 +1,13 @@
 import React from 'react'
-import Shop from './components/Shop'
+import {Shop, Sales} from './components'
 import { shopapi } from './data/data'
 const App = () => {
   return (
     <>
+    <main>
     <Shop shopapi = {shopapi}/>
+    <Sales/>
+    </main>
     </>
   )
 }
