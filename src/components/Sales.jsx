@@ -1,16 +1,24 @@
-import React from 'react'
-import Title from './Template/Title'
+import React from "react";
+import Items from "./Template/Items";
+import Title from "./Template/Title";
 
-const Sales = ({endpoint}) => {
+const Sales = ({ endpoint: {title, items} }) => {
+  console.log(title);
   return (
     <div>
-      <Title/>
+      <Title title = {title}/>
       <div>
-      <Sales/>
+        {items?.map((item,index)=>{
+          return (
+            <div>
+              <Items key={index} {...item}/>
+            </div>
+          )
+        })}
+        
       </div>
-      
     </div>
-  )
-}
+  );
+};
 
-export default Sales
+export default Sales;
