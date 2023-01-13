@@ -4,9 +4,9 @@ import { shopapi, popularsales, toprateslaes } from './data/data'
 const App = () => {
   return (
     <>
-    <main>
+    <main className='flex flex-col gap-16 relative'>
     <Shop shopapi = {shopapi}/>
-    <Sales endpoint={popularsales}/>
+    <Sales endpoint={popularsales} ifExists/>
     <Sales endpoint={toprateslaes}/>
     </main>
     </>
