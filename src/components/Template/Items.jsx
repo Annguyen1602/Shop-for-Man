@@ -20,8 +20,8 @@ const Items = ({
       <div
         className={`relative bg-gradient-to-b ${color} ${shadow} grid items-center ${
           ifExists
-            ? "justify-items-start w-[445px]"
-            : "justify-items-center w-[445px]"
+            ? "justify-items-start w-full"
+            : "justify-items-center w-full"
         } rounded-xl py-4 px-5 transition-all duration-700 ease-in-out hover:scale-105`}
       >
         <div
